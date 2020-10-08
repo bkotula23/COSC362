@@ -1,85 +1,86 @@
-%\documentclass[12pt,cancelspace]{exam}
-\doucumentclass[12pt,answers]{exam}
+%\documentclass[12pt,cancelspace]{exam} 
+\documentclass[12pt,answers]{exam}
 \usepackage{color,geometry}
 \usepackage{verbatim}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 \geometry{hmargin={1in,1in},vmargin={1in,1in}}
 \begin{document}
 
-\section*{Multiple Choice: } 
-\begin{questions} 
+\section*{Multiple Choice:} 
+\begin{questions}
+ 
 %%%%% Question 1: 
 \question What is the correct command to remove a file? 
 \begin{description} 
-\item[A.] Possible Answer \verb' remove "filename"' 
-\item[B.] Possible Answer \verb' rm "filename"' 
-\item[C.] Possible Answer \verb' "filename" remove' 
+\item[A.] Possible Answer \verb' remove filename' 
+\item[B.] Possible Answer \verb' rm filename' 
+\item[C.] Possible Answer \verb' filename remove' 
 \item[D.] Possible Answer \verb' abracadabra' 
 %answer: B 
 \end{description} 
 \begin{solution} 
-(Answer B): This is the correct command to rm a file, but if it were a directory it would be a little different.
+(Answer B): This is the correct command to rm a file, but if it were a directory it would be a little different. 
+\end{solution} 
+ 
+%%%%% Question 2: 
+\question What command creates an empty file? 
+\begin{description} 
+\item[A.] Possible Answer \verb' nano filename' 
+\item[B.] Possible Answer \verb' Emacs filename' 
+\item[C.] Possible Answer \verb' touch filename' 
+\item[D.] Possible Answer \verb' vim filename' 
+%answer: C 
+\end{description} 
+\begin{solution} 
+(Answer C): When using the command 'touch filename', there will be a blank file created under that file name 
 \end{solution}
-
-%%%%% Question 2:
-\question What command creates an empty file?
-\begin{description}
-\item[A.] Possible Answer \verb' nano "filename"'
-\item[B.] Possible Answer \verb' Emacs "filename"'
-\item[C.] Possible Answer \verb' touch "filename"'
-\item[D.] Possible Answer \verb' vim "filename"
-%answer: C
-\end{description}
-\begin{solution}
-(Answer C): When using the command 'touch "filename"', there will be a blank file created under that file name
+ 
+%%%%% Question 3: 
+\question What must you do to a bash file once you have finished editing it? 
+\begin{description} 
+\item[A.] Possible Answer \verb' make it executable' 
+\item[B.] Possible Answer \verb' make it readable' 
+\item[C.] Possible Answer \verb' keep editing it' 
+\item[D.] Possible Answer \verb' phone a friend' 
+%answer: A 
+\end{description} 
+\begin{solution} 
+(Answer A): After editing a bash file you must make it executable by using the chmod 777 'filename.sh command. 
 \end{solution}
-
-%%%%% Question 3:
-\question What must you do to a bash file once you have finished editing it?
-\begin{description}
-\item[A.] Possible Answer \verb' make it executable'
-\item[B.] Possible Answer \verb' make it readable'
-\item[C.] Possible Answer \verb' keep editing it'
-\item[D.] Possible Answer \verb' phone a friend'
-%answer: A
-\end{description}
-\begin{solution}
-(Answer A): After editing a bash file you must make it executable by using the chmod 777 'filename.sh command.
+  
+%%%%% Question 4: 
+\question What command is used to put a repository on your server? 
+\begin{description} 
+\item[A.] Possible Answer \verb' git repository link' 
+\item[B.] Possible Answer \verb' get clone repository link' 
+\item[C.] Possible Answer \verb' git copy repository link' 
+\item[D.] Possible Answer \verb' git clone repository link' 
+%answer: D 
+\end{description} 
+\begin{solution} 
+(Answer D): The proper way to 'clone' a repository to your server is to use 'git clone' and then a copy of the 
+repository link 
 \end{solution}
-
-%%%%% Question 4:
-\question What command is used to put a repository on your server?
-\begin{description}
-\item[A.] Possible Answer \verb' git "repository link"'
-\item[B.] Possible Answer \verb' get clone "repository link"'
-\item[C.] Possible Answer \verb' git copy "repository link"'
-\item[D.] Possible Answer \verb' git clone "repository link"'
-%answer: D
-\end{description}
-\begin{solution}
-(Answer D): The proper way to 'clone' a repository to your server is to use 'git clone' and then a copy of the repository link
-\end{solution}
-
 \end{questions}
-\section*{Short Answer}
-What are the steps to create a LaTex file and turn it into a pdf? 
-\begin{solution}
-First you must create your LaTex file that will become a pdf.
+ 
+\section*{Short Answer} What are the steps to create a LaTex file and 
+turn it into a pdf? 
+\begin{solution} First you must create your LaTex file that will become a pdf. 
 
 \verb' nano LaTex.tex'
 
 Then you must add the headings for your pdf file to output how you would like and what packages you would like to use in your file.
 
-\verb' example: \documentclass[12pt,answers]
-                \usepackage{color, geometry}
-                \usepackage verbatim
-                \geometry{hmargin={1in,1in},vmargin={1in,1in}}
-                \begin{document}
+\verb' example: \documentclass[12pt,answers]'
+\verb'          \usepackage{color, geometry}'
+\verb'          \usepackage verbatim'
+\verb'          \geometry{hmargin={1in,1in},vmargin={1in,1in}}'
+\verb'          \begin{document}'
 
-                *insert what you would like in your pdf.*
+\verb'          *insert what you would like in your pdf.*'
 
-                \end{document}'
+\verb'          \end{document}'
 
 Save your LaTex file
 
