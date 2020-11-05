@@ -21,6 +21,8 @@ int main(int argc,	// This is the number of arguments passed to the function.
     int imageSize;		// Total pixels in the image
     int row, col;		// Counters for the rows and columns of the image
     int radius;                 // The length of the radius of the circle
+//    int rad2;
+//    int rad3;
     int InOut;                  // Flag where (0  = out of the circle, 1 = in the circle)
     unsigned char *outImage; 	//pixel pointer for my output image
     unsigned char *ptr;		// a moving pointer
@@ -31,7 +33,7 @@ int main(int argc,	// This is the number of arguments passed to the function.
     printf("==================================================\n");
 
     if(argc != 5){
-        printf("Usage: ./PurpleCircle OutFileName numRows NumCols radius \n");
+        printf("Usage: ./PurpleCircle OutFileName numRows NumCols radius1 radius2 radius3 \n");
         exit(1);
     }
     if( (numRows = atoi(argv[2]) ) <= 0){
@@ -42,6 +44,7 @@ int main(int argc,	// This is the number of arguments passed to the function.
     }
     if( (radius = atoi(argv[4]) ) <= 0){
         printf("What are you thinking? A negative value for a circle's radius? \n");
+    //also need the if statement above for radius 2 and 3
     }
 
     // ========================================================
@@ -77,6 +80,14 @@ int main(int argc,	// This is the number of arguments passed to the function.
 	    // Advance the pointer
 	    ptr += 3;
         }
+        for(col = 0; col < numCols; col++){
+             InOut = InCircle(numRows, numCols, radius, row, col);
+             if(InOut == 1){
+                   //white pixel
+                *ptr=255;
+                *(ptr +1) = 255;
+                *(ptr +2) = 255;
+             }
     }
 
     // ========================================================
