@@ -28,7 +28,7 @@ int main(int argc,	// This is the number of arguments passed to the function.
     FILE *outputFP;		//Pointer to the output file
 
     printf("==================================================\n");
-    printf("I'm making a plain pixel map of a circle          \n");
+    printf("I'm making a Jack-O-Lantern                       \n");
     printf("==================================================\n");
 
     if(argc != 5){
