@@ -75,26 +75,42 @@ int main(int argc,	// This is the number of arguments passed to the function.
 		*(ptr + 1) = 255;
 		*(ptr + 2) = 255;
             }
+            //Stem
+            if(row > 200 && row < 300){
+               if(col > 450 && col < 475){
+                  *ptr =0;
+                  *(ptr+1) = 255;
+                  *(ptr+2) =0;
+            }
+           }
+            //eye 1
             if(row > 400 && row < 450){
                if(col > 400 && col < 450){
                   *ptr = 0;
                   *(ptr+1)=0;
                   *(ptr+2)=0;
             }
+            //eye 2
             if(col > 600 && col < 650){
               *ptr = 0;
               *(ptr+1) =0;
               *(ptr+2) =0;
             }
             }
+            //meeer mouth
             if(row > 600 && row < 610){
-              *ptr =0;
-              *(ptr+1) =0;
-              *(ptr+2) =0;
-            if(col > 400 && col < 600){
-              *ptr =0;
-              *(ptr+1) =0;
-              *(ptr+2) =0;
+               if(col > 400 && col < 600){
+                  *ptr =0;
+                  *(ptr+1) =0;
+                  *(ptr+2) =0;
+            }
+           }
+           //eyebrow
+           if(row > 380 && row < 395){
+              if(col > 390 && col < 460 || col > 590 && col < 660){
+                 *ptr =0;
+                 *(ptr+1) =0;
+                 *(ptr+2) =0;
             }
            }
 	    // Advance the pointer
